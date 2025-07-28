@@ -76,8 +76,6 @@ This project uses the Google A2A framework to generate poetry in the voice of Ra
 - `approved` (boolean)
 - `feedback` (string)
 
----
-
 ## Invocation Order
 
 User → WebBrowsingAgent → ResearchAgent → ContextAgent → PoetAgent ↔ CritiqueAgent → Final Output
