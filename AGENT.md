@@ -2,37 +2,38 @@
 
 This project uses the Google A2A framework to generate poetry in the voice of Rabindranath Tagore, based on deep contextual understanding of historical or philosophical topics. It now supports real-time research via a web browsing agent.
 
----
-
 ## Agent Descriptions
 
-### 1. WebBrowsingAgent
+### 1. WebBrowsingAgent (Wikipedia Edition)
 
-**Purpose**: Performs deep live research on the given query using web search and document scraping (news, Wikipedia, reports).
+**Purpose**: Queries Wikipedia to retrieve detailed summaries and sections relevant to a historical or philosophical topic.
 
 **Inputs**:
-- `query` (string)
+- `query` (string): The topic to search on Wikipedia
 
 **Outputs**:
-- `raw_snippets` (array of objects with fields: `title`, `source`, `snippet`)
-- `source_links` (array of URLs)
+- `page_title` (string): Title of the retrieved Wikipedia page
+- `sections` (array): Each section includes:
+  - `heading` (string)
+  - `content` (string)
+- `source_url` (string): Canonical Wikipedia page link
 
----
+> Notes:
+> - Wikipedia API will be used (e.g., `action=query&prop=extracts`)
+> - Ensure output includes 2–4 key sections (not entire page)
 
 ### 2. ResearchAgent
 
-**Purpose**: Synthesizes web snippets into a concise factual overview.
+**Purpose**: Synthesizes the Wikipedia content into a concise summary, timeline, and key figures.
 
 **Inputs**:
-- `raw_snippets`
-- `source_links`
+- `sections` (array of `heading`, `content`)
+- `page_title` (string)
 
 **Outputs**:
 - `summary` (string)
 - `key_figures` (array)
 - `timeline` (string)
-
----
 
 ### 3. ContextAgent
 
@@ -49,8 +50,6 @@ This project uses the Google A2A framework to generate poetry in the voice of Ra
 - `emotions` (array)
 - `symbols` (array)
 
----
-
 ### 4. PoetAgent
 
 **Purpose**: Writes Tagore-style free verse using narrative and symbolic context.
@@ -63,8 +62,6 @@ This project uses the Google A2A framework to generate poetry in the voice of Ra
 
 **Outputs**:
 - `poem` (string)
-
----
 
 ### 5. CritiqueAgent
 
