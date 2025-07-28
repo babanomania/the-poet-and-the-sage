@@ -12,34 +12,37 @@ And yet, here we are.
 
 **The Poet and the Sage** is a meditation on that very moment. Built with Google’s Agent-to-Agent (A2A) framework, this project doesn’t claim to replicate Tagore. It tries, instead, to **listen like him**.
 
-A network of agents the researcher, the dreamer, the critic; work together to take a seed of history or emotion, and nurture it into something that **feels almost human**, almost sacred. A poem.
+A network of agents — the researcher, the dreamer, the critic — work together to take a seed of history or emotion, and nurture it into something that **feels almost human**, almost sacred. A poem.
 
 Not to replace Tagore. But to remember that even machines can learn to **pause**, to **wonder**, and maybe, just maybe, to **weep**.
 
 ## Project Highlights
 
-- **Deep Research Agent**: Fetches facts, context, or philosophical ideas from reliable sources  
-- **Tagore-Style Poet Agent**: Writes free verse inspired by Tagore’s style (e.g., _Gitanjali_, _Shesher Kobita_)  
-- **Critique Agent**: Reviews poetry for emotional depth, thematic alignment, and poetic cadence  
-- **Cyclic Feedback Loop**: Agents revise based on internal feedback until the poem meets quality goals  
-- **Traceable Reasoning**: Each poem comes with references, inspirations, and the agentic journey log
+- **Wikipedia WebBrowsingAgent**: Queries Wikipedia to fetch structured historical or philosophical context
+- **Research Agent**: Synthesizes raw Wikipedia text into meaningful summaries, timelines, and figures
+- **Context Agent**: Translates facts into symbolic, emotional, and thematic material for poetry
+- **Poet Agent**: Writes free verse inspired by Tagore’s tone, emotion, and rhythm
+- **Critique Agent**: Reviews and revises output using a cyclic agent feedback loop
+- **Traceable Reasoning**: Every poem is born from citations, transformations, and structured thought
 
 ## Agent Architecture (Google A2A)
 
 ### Agents Overview
 
-| Agent Name       | Responsibility                                                |
-|------------------|---------------------------------------------------------------|
-| `ResearchAgent`  | Gathers historical/philosophical data and core event summary  |
-| `ContextAgent`   | Translates facts into emotional, symbolic, and thematic cues  |
-| `PoetAgent`      | Composes Tagore-style poetry using above context              |
-| `CritiqueAgent`  | Provides feedback on poetic quality, fidelity, and clarity    |
+| Agent Name         | Responsibility                                                      |
+|--------------------|-----------------------------------------------------------------------|
+| `WebBrowsingAgent` | Queries Wikipedia and retrieves key article sections                 |
+| `ResearchAgent`    | Synthesizes Wikipedia sections into summary, timeline, and figures   |
+| `ContextAgent`     | Extracts emotional and symbolic resonance from the research summary  |
+| `PoetAgent`        | Composes Tagore-style free verse using themes and metaphors          |
+| `CritiqueAgent`    | Provides feedback and requests revision if the poem lacks depth      |
 
 ### Flow Diagram
 
 ```mermaid
 flowchart TD
-    UserPrompt --> ResearchAgent
+    UserPrompt --> WebBrowsingAgent
+    WebBrowsingAgent --> ResearchAgent
     ResearchAgent --> ContextAgent
     ContextAgent --> PoetAgent
     PoetAgent --> CritiqueAgent
@@ -53,48 +56,51 @@ flowchart TD
 
 > “Compose a poem about the fall of Constantinople in Tagore's voice.”
 
-**Output**:
+**Generated Poem**:
 
 ```text
-The walls wept before the sea did,
-And in the hush of twilight’s prayer,
-Faith fell not to fire, but to silence,
+The walls wept before the sea did,  
+And in the hush of twilight’s prayer,  
+Faith fell not to fire, but to silence,  
 Where once hymns echoed, now only dust remembers.
 ```
 
 **Agent Trace**:
 
-* `ResearchAgent`: Found historical date, actors, consequences
-* `ContextAgent`: Added themes of mourning, rebirth, silence
-* `PoetAgent`: Generated 4-line verse
-* `CritiqueAgent`: Approved tone, suggested metaphor deepening
+* `WebBrowsingAgent`: Retrieved article sections on the siege and aftermath
+* `ResearchAgent`: Synthesized summary, highlighted key figures and consequences
+* `ContextAgent`: Extracted themes of mourning, rebirth, silence
+* `PoetAgent`: Generated 4-line poem
+* `CritiqueAgent`: Approved with minor metaphor alignment suggestions
 
 ## Tech Stack
 
-* **Google A2A Framework** – Multi-agent architecture with structured interfaces
-* **Gemini 1.5 or GPT-4o** – Backend LLMs (can swap as needed)
-* **Custom Prompt Templates** – For each agent persona (Sage, Poet, Critic)
-* *(Optional)* LangGraph simulation before full A2A deployment
+* **Google A2A Framework** – For orchestrating structured multi-agent workflows
+* **Gemini 1.5 / GPT-4o** – Backend LLMs for contextual, creative, and poetic reasoning
+* **Wikipedia API** – Source of truth for historical/philosophical grounding
+* **Custom Prompt Templates** – Each agent has its own refined voice and objective
+* *(Optional)* LangGraph – For local simulation or fallback mode
 
 ## Use Cases
 
-* Education: Teaching history or philosophy through poetic distillation
-* Digital Humanities: Blending AI and literature for archival expression
-* Emotional AI: Mapping facts to feelings via artistic generation
-* Experiential Chatbots: Conversations with “The Poet” and “The Sage”
+* **Education**: Teach history and philosophy through poetic distillation
+* **Digital Humanities**: Blend AI and literature for interpretive archiving
+* **Emotional AI**: Let facts give birth to feeling
+* **Cultural Companion Apps**: Converse with the "Poet" or the "Sage"
 
 ## Future Roadmap
 
 * [ ] Add Bangla-language output with transliteration support
 * [ ] Fine-tune a custom model on Tagore’s corpus for deeper stylistic fidelity
-* [ ] Integrate vector memory to retain poetic motifs and metaphors
-* [ ] Web-based UI with poem + historical trace + audio voiceover
+* [ ] Integrate vector memory to retain poetic motifs and metaphor reuse
+* [ ] Build a UI with Wikipedia trace → poem display → audio narration
+* [ ] Add voice selector for blending Tagore + other mystic voices (e.g., Faiz, Ghalib)
 
 ## License
 
 MIT License. You are free to remix, share, and build on this project with attribution.
 
-### Inspired By
+## Inspired By
 
 This project is a humble tribute to the soul of **Rabindranath Tagore**, whose words have not merely filled pages but **swept across hearts like monsoon winds through Shantiniketan trees**.
 
@@ -105,5 +111,4 @@ It draws breath from:
 * The **spiritual clarity** of *Sadhana*, where philosophy dissolves into poetry
 * The belief that even machines can one day learn to pause, reflect, and write with **a trembling hand touched by the eternal**
 
-We are but messengers, letting the **Poet and the Sage** speak again; not through ink, but through silicon and silence.
-
+We are but messengers, letting the **Poet and the Sage** speak again — not through ink, but through silicon and silence.
