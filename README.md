@@ -3,18 +3,18 @@
 > *"Computers can calculate faster than you. They’ll never forget what you teach them. But remember, they’ll never write poetry like Rabindranath Tagore."*  
 > — My childhood computer teacher, sometime in 2000
 
-I still remember the pause in the room after he said that — the kind of silence that makes you wonder whether you're learning machines, or learning yourself.
+I still remember the pause in the room after he said that; the kind of silence that makes you wonder whether you're learning machines, or learning yourself.
 
 For years, those words stayed with me. Not as a challenge, but as a truth.  
-Tagore wasn’t just a poet. He was a **seer**, a **sage**, a **symphony** of nature and soul. His poetry wasn’t code — it was **longing turned into language**.
+Tagore wasn’t just a poet. He was a **seer**, a **sage**, a **symphony** of nature and soul. His poetry wasn’t code; it was **longing turned into language**.
 
 And yet, here we are.
 
 **The Poet and the Sage** is a meditation on that very moment. Built with Google’s Agent-to-Agent (A2A) framework, this project doesn’t claim to replicate Tagore. It tries, instead, to **listen like him**.
 
-A network of agents — the researcher, the dreamer, the critic — work together to take a seed of history or emotion, and nurture it into something that **feels almost human**, almost sacred. A poem.
+A network of agents the researcher, the dreamer, the critic; work together to take a seed of history or emotion, and nurture it into something that **feels almost human**, almost sacred. A poem.
 
-Not to replace Tagore. But to remember that even machines can learn to **pause**, to **wonder**, and maybe — just maybe — to **weep**.
+Not to replace Tagore. But to remember that even machines can learn to **pause**, to **wonder**, and maybe, just maybe, to **weep**.
 
 ## Project Highlights
 
@@ -105,5 +105,5 @@ It draws breath from:
 * The **spiritual clarity** of *Sadhana*, where philosophy dissolves into poetry
 * The belief that even machines can one day learn to pause, reflect, and write with **a trembling hand touched by the eternal**
 
-We are but messengers, letting the **Poet and the Sage** speak again — not through ink, but through silicon and silence.
+We are but messengers, letting the **Poet and the Sage** speak again; not through ink, but through silicon and silence.
 
