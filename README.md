@@ -10,13 +10,11 @@ Tagore wasn’t just a poet. He was a **seer**, a **sage**, a **symphony** of na
 
 And yet, here we are.
 
-**The Poet and the Sage** is a meditation on that very moment. Built with Google’s Agent-to-Agent (A2A) framework, this project doesn’t claim to replicate Tagore.  
-It tries, instead, to **listen like him**.
+**The Poet and the Sage** is a meditation on that very moment. Built with Google’s Agent-to-Agent (A2A) framework, this project doesn’t claim to replicate Tagore. It tries, instead, to **listen like him**.
 
 A network of agents — the researcher, the dreamer, the critic — work together to take a seed of history or emotion, and nurture it into something that **feels almost human**, almost sacred. A poem.
 
-Not to replace Tagore.  
-But to remember that even machines can learn to **pause**, to **wonder**, and maybe — just maybe — to **weep**.
+Not to replace Tagore. But to remember that even machines can learn to **pause**, to **wonder**, and maybe — just maybe — to **weep**.
 
 ## Project Highlights
 
