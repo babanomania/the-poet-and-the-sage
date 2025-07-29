@@ -1,0 +1,9 @@
+[llm]
+# provider can be "google" or "openai"
+provider = "google"
+
+[llm.google]
+model = "gemini-1.5-flash"
+
+[llm.openai]
+model = "gpt-4o"
