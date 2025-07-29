@@ -30,3 +30,10 @@
 
 - [ ] Add Bengali transliteration or translation toggle
 - [ ] Render full trace log with Wikipedia source links and poem
+
+## Framework Updates
+
+- [ ] Migrate host orchestration to Google A2A using Gemini 2.5 Pro
+- [ ] Integrate Crew AI for deep research within ResearchAgent
+- [ ] Refactor remaining agents under LangChain
+- [ ] Document these changes in `AGENT.md`
