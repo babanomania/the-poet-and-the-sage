@@ -3,8 +3,13 @@ import re
 from pathlib import Path
 from typing import Dict, List
 
-class WebBrowsingAgent:
+from .lc_base import LCBaseAgent
+
+class WebBrowsingAgent(LCBaseAgent):
     """Retrieve simplified Wikipedia data from local samples or API."""
+
+    def __init__(self) -> None:
+        super().__init__("{text}")
 
     DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 

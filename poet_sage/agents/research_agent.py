@@ -1,7 +1,14 @@
 from typing import Dict, List
 
-class ResearchAgent:
-    """Synthesize article sections into summary, figures, and timeline."""
+from crewai import Crew, Agent as CrewAgent
+from .lc_base import LCBaseAgent
+
+class ResearchAgent(LCBaseAgent):
+    """Synthesize article sections into summary, figures, and timeline using Crew AI."""
+
+    def __init__(self) -> None:
+        super().__init__("{text}")
+        self.crew = Crew(agents=[CrewAgent(name="researcher", role="researcher", goal="synthesis", backstory="")])
 
     FIGURE_DB = {
         "Partition_of_Bengal_(1905)": ["Lord Curzon", "Rabindranath Tagore"],

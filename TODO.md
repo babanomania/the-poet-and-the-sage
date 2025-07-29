@@ -33,7 +33,7 @@
 
 ## Framework Updates
 
-- [ ] Migrate host orchestration to Google A2A using Gemini 2.5 Pro
-- [ ] Integrate Crew AI for deep research within ResearchAgent
-- [ ] Refactor remaining agents under LangChain
-- [ ] Document these changes in `AGENT.md`
+- [x] Migrate host orchestration to Google A2A using Gemini 2.5 Pro
+- [x] Integrate Crew AI for deep research within ResearchAgent
+- [x] Refactor remaining agents under LangChain
+- [x] Document these changes in `AGENT.md`
