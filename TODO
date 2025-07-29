@@ -1,30 +1,30 @@
 ## Agent Tasks
 
-- [ ] Implement `WebBrowsingAgent` using Wikipedia API (e.g., `https://en.wikipedia.org/api/rest_v1/page/summary/{topic}`)
-- [ ] Support fallback to local summary if Wikipedia page not found
-- [ ] Limit sections to 3–4 most relevant (e.g., Intro, History, Legacy, Cultural Impact)
+- [x] Implement `WebBrowsingAgent` using Wikipedia API (e.g., `https://en.wikipedia.org/api/rest_v1/page/summary/{topic}`)
+- [x] Support fallback to local summary if Wikipedia page not found
+- [x] Limit sections to 3–4 most relevant (e.g., Intro, History, Legacy, Cultural Impact)
 
 ## Prompt Adaptations
 
-- [ ] Update `research_prompt.txt` to assume full article sections rather than mixed snippets
-- [ ] Include instruction in `context_prompt.txt` to draw emotional insight from a more encyclopedic tone
-- [ ] Refine `poet_prompt.txt` to rely more on `narrative_context`
+- [x] Update `research_prompt.txt` to assume full article sections rather than mixed snippets
+- [x] Include instruction in `context_prompt.txt` to draw emotional insight from a more encyclopedic tone
+- [x] Refine `poet_prompt.txt` to rely more on `narrative_context`
 
 ## Agent Control
 
-- [ ] Add retry cycle between PoetAgent and CritiqueAgent
-- [ ] Store critique feedback and show delta between original and final poem
+- [x] Add retry cycle between PoetAgent and CritiqueAgent
+- [x] Store critique feedback and show delta between original and final poem
 
 ## Example Test Cases
 
-- [ ] “Write a poem about the Partition of Bengal” → Pulls from `Partition_of_Bengal_(1905)` and `Partition_of_India`
-- [ ] “Reflect on the teachings of Buddha” → Uses `Gautama_Buddha`
-- [ ] “Capture the idea of Swaraj” → Searches `Swaraj` page
+- [x] “Write a poem about the Partition of Bengal” → Pulls from `Partition_of_Bengal_(1905)` and `Partition_of_India`
+- [x] “Reflect on the teachings of Buddha” → Uses `Gautama_Buddha`
+- [x] “Capture the idea of Swaraj” → Searches `Swaraj` page
 
 ## Safety and Boundaries
 
-- [ ] Sanitize Wikipedia titles before request
-- [ ] Graceful handling of disambiguation or missing pages
+- [x] Sanitize Wikipedia titles before request
+- [x] Graceful handling of disambiguation or missing pages
 
 ## Optional Add-ons
 
