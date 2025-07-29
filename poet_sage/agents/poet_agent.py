@@ -1,8 +1,13 @@
 import random
 from typing import Dict, Optional
 
-class PoetAgent:
+from .lc_base import LCBaseAgent
+
+class PoetAgent(LCBaseAgent):
     """Compose Tagore-style free verse."""
+
+    def __init__(self) -> None:
+        super().__init__("{text}")
 
     def run(self, context: Dict, feedback: Optional[str] = None) -> Dict:
         themes = context.get("themes", [])

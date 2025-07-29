@@ -1,7 +1,12 @@
 from typing import Dict, List
 
-class ContextAgent:
+from .lc_base import LCBaseAgent
+
+class ContextAgent(LCBaseAgent):
     """Map research output into themes, emotions, and symbols."""
+
+    def __init__(self) -> None:
+        super().__init__("{text}")
 
     CONTEXT_DB = {
         "Partition_of_Bengal_(1905)": {

@@ -19,7 +19,7 @@ source .venv/bin/activate
 ## 3. Install dependencies
 
 ```bash
-pip install requests
+pip install requests crewai langchain langchain-community
 ```
 
 The agents will try to call the Wikipedia API. If your environment does not have internet access, the project falls back to the sample JSON files in `poet_sage/data/`.

@@ -1,7 +1,12 @@
 from typing import Dict
 
-class CritiqueAgent:
+from .lc_base import LCBaseAgent
+
+class CritiqueAgent(LCBaseAgent):
     """Review poem quality and suggest revisions."""
+
+    def __init__(self) -> None:
+        super().__init__("{text}")
 
     def run(self, poem: str, themes: list, emotions: list) -> Dict:
         approved = True

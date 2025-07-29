@@ -88,3 +88,9 @@ This project uses the Google A2A framework to generate poetry in the voice of Ra
 User → WebBrowsingAgent → ResearchAgent → ContextAgent → PoetAgent ↔ CritiqueAgent → Final Output
 
 All agents operate with structured JSON schemas and reusable prompt templates. Every language model request uses **Gemini 2.5 Pro**.
+
+## Recent Framework Updates
+
+- Host orchestration migrated to Google's A2A framework with Gemini 2.5 Pro.
+- ResearchAgent now integrates **Crew AI** for deeper research.
+- Remaining agents run under **LangChain** abstractions.
