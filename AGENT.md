@@ -2,6 +2,13 @@
 
 This project uses the Google A2A framework to generate poetry in the voice of Rabindranath Tagore, based on deep contextual understanding of historical or philosophical topics. It now supports real-time research via a web browsing agent.
 
+### Framework Overview
+
+- **Host Agent**: orchestrated with Google's Agent-to-Agent (A2A) framework.
+- **ResearchAgent**: enhanced with Crew AI for deep topical research.
+- **Other Agents**: implemented using LangChain abstractions.
+- **LLM Backend**: all agent prompts run on **Gemini 2.5 Pro**.
+
 ## Agent Descriptions
 
 ### 1. WebBrowsingAgent (Wikipedia Edition)
@@ -24,7 +31,7 @@ This project uses the Google A2A framework to generate poetry in the voice of Ra
 
 ### 2. ResearchAgent
 
-**Purpose**: Synthesizes the Wikipedia content into a concise summary, timeline, and key figures.
+**Purpose**: Synthesizes the Wikipedia content into a concise summary, timeline, and key figures using Crew AI's advanced research capabilities.
 
 **Inputs**:
 - `sections` (array of `heading`, `content`)
@@ -80,4 +87,4 @@ This project uses the Google A2A framework to generate poetry in the voice of Ra
 
 User → WebBrowsingAgent → ResearchAgent → ContextAgent → PoetAgent ↔ CritiqueAgent → Final Output
 
-All agents operate with structured JSON schemas and reusable prompt templates.
+All agents operate with structured JSON schemas and reusable prompt templates. Every language model request uses **Gemini 2.5 Pro**.
