@@ -20,8 +20,8 @@ Not to replace Tagore. But to remember that even machines can learn to **pause**
 
 - **Wikipedia WebBrowsingAgent**: Queries Wikipedia to fetch structured historical or philosophical context
 - **Research Agent**: Synthesizes raw Wikipedia text into meaningful summaries, timelines, and figures
-- **Context Agent**: Translates facts into symbolic, emotional, and thematic material for poetry
-- **Poet Agent**: Writes free verse inspired by Tagore’s tone, emotion, and rhythm
+- **Context Agent**: Translates facts into symbolic, emotional, and thematic material for poetry 
+- **Poet Agent**: Writes free verse inspired by Tagore’s tone, emotion, and rhythm 
 - **Critique Agent**: Reviews and revises output using a cyclic agent feedback loop
 - **Traceable Reasoning**: Every poem is born from citations, transformations, and structured thought
 
@@ -29,26 +29,38 @@ Not to replace Tagore. But to remember that even machines can learn to **pause**
 
 ### Agents Overview
 
-| Agent Name         | Responsibility                                                      |
-|--------------------|-----------------------------------------------------------------------|
-| `WebBrowsingAgent` | Queries Wikipedia and retrieves key article sections                 |
-| `ResearchAgent`    | Synthesizes Wikipedia sections into summary, timeline, and figures   |
-| `ContextAgent`     | Extracts emotional and symbolic resonance from the research summary  |
-| `PoetAgent`        | Composes Tagore-style free verse using themes and metaphors          |
-| `CritiqueAgent`    | Provides feedback and requests revision if the poem lacks depth      |
+| Agent Name         | Responsibility                                                      | Framework              |
+|--------------------|-----------------------------------------------------------------------|------------------------|
+| `WebBrowsingAgent` | Queries Wikipedia and retrieves key article sections                 | Crew AI |
+| `ResearchAgent`    | Synthesizes Wikipedia sections into summary, timeline, and figures   | A2A SDK              |
+| `ContextAgent`     | Extracts emotional and symbolic resonance from the research summary  | A2A SDK              |
+| `PoetAgent`        | Composes Tagore-style free verse using themes and metaphors          | LangChain  |
+| `CritiqueAgent`    | Provides feedback and requests revision if the poem lacks depth      | LangChain  |
 
-### Flow Diagram
+### Sequence Diagram
 
 ```mermaid
-flowchart TD
-    UserPrompt --> WebBrowsingAgent
-    WebBrowsingAgent --> ResearchAgent
-    ResearchAgent --> ContextAgent
-    ContextAgent --> PoetAgent
-    PoetAgent --> CritiqueAgent
-    CritiqueAgent -->|Revise| PoetAgent
-    CritiqueAgent -->|Approve| FinalOutput
-````
+sequenceDiagram
+    participant U as User Prompt
+    participant H as HostAgent
+    participant W as WebBrowsingAgent
+    participant R as ResearchAgent
+    participant C as ContextAgent
+    participant P as PoetAgent
+    participant K as CritiqueAgent
+    participant F as Final Output
+
+    U->>H: Prompt with topic or emotion
+    H->>W: Fetch Wikipedia article
+    W->>R: Provide article sections
+    R->>R: (optional) Ask W for deeper articles
+    R->>C: Send summarized context
+    C->>P: Send symbolic & emotional themes
+    P->>K: Send generated poem
+    K-->>P: Request revision (if needed)
+    K->>H: Approve final poem
+    H->>U: Generated Poem
+```
 
 ## Example Use Case
 
@@ -76,10 +88,10 @@ Where once hymns echoed, now only dust remembers.
 ## Tech Stack
 
 * **Google A2A Framework** – For orchestrating structured multi-agent workflows
+* **LangChain / LangGraph** – For LLM orchestration and step-by-step tool use
 * **Gemini 1.5 / GPT-4o** – Backend LLMs for contextual, creative, and poetic reasoning
 * **Wikipedia API** – Source of truth for historical/philosophical grounding
 * **Custom Prompt Templates** – Each agent has its own refined voice and objective
-* *(Optional)* LangGraph – For local simulation or fallback mode
 
 ## Use Cases
 
@@ -88,12 +100,9 @@ Where once hymns echoed, now only dust remembers.
 * **Emotional AI**: Let facts give birth to feeling
 * **Cultural Companion Apps**: Converse with the "Poet" or the "Sage"
 
-## Future Roadmap
+## Setup Instructions
 
-* [ ] Add Bangla-language output with transliteration support
-* [ ] Fine-tune a custom model on Tagore’s corpus for deeper stylistic fidelity
-* [ ] Integrate vector memory to retain poetic motifs and metaphor reuse
-* [ ] Add voice selector for blending Tagore + other mystic voices (e.g., Faiz, Ghalib)
+For installation, agent execution, and local development steps, please refer to [SETUP.md](./SETUP.md).
 
 ## License
 
