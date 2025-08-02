@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 import wikipedia
 
+from config import get_model_name
 load_dotenv()
 
 
@@ -47,7 +48,7 @@ class WikipediaAgent:
         """Initializes the WikipediaAgent."""
         if os.getenv("GOOGLE_API_KEY"):
             self.llm = LLM(
-                model="gemini/gemini-2.0-flash",
+                model=get_model_name(),
                 api_key=os.getenv("GOOGLE_API_KEY"),
             )
         else:

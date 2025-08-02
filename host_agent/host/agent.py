@@ -26,6 +26,7 @@ from google.adk.tools.tool_context import ToolContext
 from google.genai import types
 
 from .remote_agent_connection import RemoteAgentConnections
+from .config import get_model_name
 
 load_dotenv()
 nest_asyncio.apply()
@@ -78,7 +79,7 @@ class HostAgent:
 
     def create_agent(self) -> Agent:
         return Agent(
-            model="gemini-2.0-flash",
+            model=get_model_name(),
             name="Host_Agent",
             instruction=self.root_instruction,
             description="This Host agent orchestrates poetic response generation using supporting agents.",

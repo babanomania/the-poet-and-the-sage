@@ -9,6 +9,8 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.prebuilt import create_react_agent
 from pydantic import BaseModel, Field
 
+from config import get_model_name
+
 memory = MemorySaver()
 
 class PoemInput(BaseModel):
@@ -49,7 +51,7 @@ class CritiqueAgent:
     """
 
     def __init__(self):
-        self.model = ChatGoogleGenerativeAI(model="gemini-2.0-flash")
+        self.model = ChatGoogleGenerativeAI(model=get_model_name())
         self.tools = [critique_poem]
 
         self.graph = create_react_agent(

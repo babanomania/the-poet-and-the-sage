@@ -2,9 +2,9 @@
 # It tells uv that this project is a monorepo containing multiple packages.
 
 [project]
-name = "a2a-friend-scheduling"
+name = "host-agent"
 version = "0.1.0"
-description = "A multi-agent system for scheduling pickleball games."
+description = "A multi-agent system for writing poetry on a topic."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
@@ -17,7 +17,8 @@ dependencies = [
     "uvicorn",
     "google-generativeai",
     "httpx",
-
-    # Kaitlyn's agent dependencies (future)
-    # "langgraph"
+    "tomli"
 ]
+
+[tool]
+model_name = "gemini-2.0-flash"

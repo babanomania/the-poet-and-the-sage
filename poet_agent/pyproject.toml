@@ -1,7 +1,7 @@
 [project]
-name = "a2a-kaitlyn-agent-langgraph"
+name = "poet-agent"
 version = "0.1.0"
-description = "Kaitlyn's LangGraph scheduling agent with A2A Protocol"
+description = "Composes emotional free verse poetry using symbolic context provided by prior agents."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -13,6 +13,7 @@ dependencies = [
     "python-dotenv>=1.1.0",
     "uvicorn>=0.34.2",
     "langchain-core",
+    "tomli"
 ]
 
 [tool.hatch.build.targets.wheel]
@@ -21,3 +22,6 @@ packages = ["app"]
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool]
+model_name = "gemini-2.0-flash"

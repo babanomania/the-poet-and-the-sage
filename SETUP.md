@@ -58,7 +58,7 @@ uv run --active .
 cd poet_agent
 uv venv
 source .venv/bin/activate
-uv run --active app/__main__.py
+uv run --active app
 ```
 
 ### Terminal 5 - Critique Agent
@@ -67,7 +67,7 @@ uv run --active app/__main__.py
 cd critique_agent
 uv venv
 source .venv/bin/activate
-uv run --active app/__main__.py
+uv run --active app
 ```
 
 ---

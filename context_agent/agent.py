@@ -1,5 +1,5 @@
 from google.adk.agents import LlmAgent
-
+from config import get_model_name
 
 def transform_research_output(research_json: str) -> str:
     """
@@ -17,7 +17,7 @@ def transform_research_output(research_json: str) -> str:
 
 def create_agent() -> LlmAgent:
     return LlmAgent(
-        model="gemini-2.0-flash",
+        model=get_model_name(),
         name="ContextAgent",
         instruction="""
             **Role:** You are the ContextAgent in 'The Poet and the Sage'.

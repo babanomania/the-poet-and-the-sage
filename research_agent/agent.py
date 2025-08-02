@@ -1,6 +1,6 @@
 from typing import List, Dict
 from google.adk.agents import LlmAgent
-
+from config import get_model_name
 
 def synthesize_research(wikipedia_sections: List[str]) -> Dict[str, str]:
     """
@@ -31,7 +31,7 @@ def synthesize_research(wikipedia_sections: List[str]) -> Dict[str, str]:
 def create_agent() -> LlmAgent:
     """Constructs the A2A ResearchAgent for 'The Poet and the Sage'."""
     return LlmAgent(
-        model="gemini-2.0-flash",
+        model=get_model_name(),
         name="ResearchAgent",
         instruction="""
             **Role:** You are the ResearchAgent in a poetic AI collective. 
