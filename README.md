@@ -93,7 +93,6 @@ Where once hymns echoed, now only dust remembers.
 * [ ] Add Bangla-language output with transliteration support
 * [ ] Fine-tune a custom model on Tagore’s corpus for deeper stylistic fidelity
 * [ ] Integrate vector memory to retain poetic motifs and metaphor reuse
-* [ ] Build a UI with Wikipedia trace → poem display → audio narration
 * [ ] Add voice selector for blending Tagore + other mystic voices (e.g., Faiz, Ghalib)
 
 ## License
