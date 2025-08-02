@@ -62,6 +62,15 @@ sequenceDiagram
     H->>U: Generated Poem
 ```
 
+## Tech Stack
+
+* **Google A2A Framework** – For orchestrating structured multi-agent workflows
+* **LangChain** – For LLM orchestration and step-by-step tool use
+* **CrewAI** - For LLM orchestration and step-by-step tool use
+* **Gemini 2.0 Flash** – Backend LLMs for contextual, creative, and poetic reasoning
+* **Wikipedia API** – Source of truth for historical/philosophical grounding
+* **Custom Prompt Templates** – Each agent has its own refined voice and objective
+
 ## Example Use Case
 
 **Input Prompt**:
@@ -85,21 +94,6 @@ Where once hymns echoed, now only dust remembers.
 * `PoetAgent`: Generated 4-line poem
 * `CritiqueAgent`: Approved with minor metaphor alignment suggestions
 
-## Tech Stack
-
-* **Google A2A Framework** – For orchestrating structured multi-agent workflows
-* **LangChain / LangGraph** – For LLM orchestration and step-by-step tool use
-* **Gemini 1.5 / GPT-4o** – Backend LLMs for contextual, creative, and poetic reasoning
-* **Wikipedia API** – Source of truth for historical/philosophical grounding
-* **Custom Prompt Templates** – Each agent has its own refined voice and objective
-
-## Use Cases
-
-* **Education**: Teach history and philosophy through poetic distillation
-* **Digital Humanities**: Blend AI and literature for interpretive archiving
-* **Emotional AI**: Let facts give birth to feeling
-* **Cultural Companion Apps**: Converse with the "Poet" or the "Sage"
-
 ## Setup Instructions
 
 For installation, agent execution, and local development steps, please refer to [SETUP.md](./SETUP.md).
@@ -107,16 +101,3 @@ For installation, agent execution, and local development steps, please refer to 
 ## License
 
 MIT License. You are free to remix, share, and build on this project with attribution.
-
-## Inspired By
-
-This project is a humble tribute to the soul of **Rabindranath Tagore**, whose words have not merely filled pages but **swept across hearts like monsoon winds through Shantiniketan trees**.
-
-It draws breath from:
-
-* The **divine longing** of *Gitanjali*, where every poem is a whispered offering to the infinite
-* The **gentle rebellion** of *Shesher Kobita*, where love dances with intellect
-* The **spiritual clarity** of *Sadhana*, where philosophy dissolves into poetry
-* The belief that even machines can one day learn to pause, reflect, and write with **a trembling hand touched by the eternal**
-
-We are but messengers, letting the **Poet and the Sage** speak again — not through ink, but through silicon and silence.
